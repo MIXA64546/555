@@ -1,0 +1,4 @@
+Select 
+Prepodovatel.Name,Prepodovatel.Familiya,Prepodovatel.Othestvo,Prepodovatel.Date_rojdeniya,Disciplina.Name,DATEDIFF(YEAR,Prepodovatel.Date_rojdeniya,GETDATE()) as Vozrast,DATEDIFF(YEAR,Prepodovatel.Date_priyoma,GETDATE()) as Staj from Prepodovatel,Disciplina,Disciplina_Prepodovatel
+where Prepodovatel.Prepodovatel_id = Disciplina_Prepodovatel.Prepodovatel_cod and Disciplina.Disciplina_id = Disciplina_Prepodovatel.Disciplina_cod
+group by Prepodovatel.Name,Prepodovatel.Familiya,Prepodovatel.Othestvo,Prepodovatel.Date_rojdeniya,Disciplina.Name,DATEDIFF(YEAR,Prepodovatel.Date_priyoma,GETDATE())
