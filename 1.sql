@@ -1,8 +1,13 @@
 
 
 Select Prepodovatel.Familiya as F_prepod,
+ 
 		Prepodovatel.Name as F_name,
 		Prepodovatel.Othestvo as F_
+
+		
+		Prepodovatel.Othestvo as F_Otchestvo,
+
 		Ocenka.Ocenka as Ocenka,
 		Student.Familiya as S_familya,
 		Student.Name as S_name,
